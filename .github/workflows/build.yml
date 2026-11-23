@@ -1,0 +1,52 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'content/**'
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Unpack app source
+        run: unzip -o project.zip
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build
+        run: >
+          gradle assembleRelease --no-daemon
+          -PcontentUrl=https://raw.githubusercontent.com/${{ github.repository }}/main/content/
+          -PbuildNumber=${{ github.run_number }}
+
+      - name: Rename APK
+        run: cp app/build/outputs/apk/release/app-release.apk WolfSignage.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WolfSignage
+          path: WolfSignage.apk
+
+      - name: Publish download link
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: app
+          name: Restaurant Screens App
+          files: WolfSignage.apk
+          make_latest: true
