@@ -1,0 +1,11 @@
+{
+  "imageSeconds": 8,
+  "mute": false,
+  "fit": "cover",
+  "items": [
+    { "file": "dish1.jpg", "title": "مندي لحم", "price": "45 ريال" },
+    { "file": "dish2.jpg", "title": "كبسة دجاج", "price": "30 ريال" },
+    { "file": "dish3.jpg", "title": "مقلوبة", "price": "35 ريال" },
+    { "file": "promo.mp4" }
+  ]
+}
