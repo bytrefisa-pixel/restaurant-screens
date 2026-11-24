@@ -3,9 +3,65 @@
   "mute": false,
   "fit": "cover",
   "items": [
-    { "file": "dish1.jpg", "title": "مندي لحم", "price": "45 ريال" },
-    { "file": "dish2.jpg", "title": "كبسة دجاج", "price": "30 ريال" },
-    { "file": "dish3.jpg", "title": "مقلوبة", "price": "35 ريال" },
-    { "file": "promo.mp4" }
+    {
+      "file": "dish01.jpg"
+    },
+    {
+      "file": "dish02.jpg"
+    },
+    {
+      "file": "dish03.jpg"
+    },
+    {
+      "file": "dish04.jpg"
+    },
+    {
+      "file": "dish05.jpg"
+    },
+    {
+      "file": "dish06.jpg"
+    },
+    {
+      "file": "promo.mp4"
+    },
+    {
+      "file": "dish07.jpg"
+    },
+    {
+      "file": "dish08.jpg"
+    },
+    {
+      "file": "dish09.jpg"
+    },
+    {
+      "file": "dish10.jpg"
+    },
+    {
+      "file": "dish11.jpg"
+    },
+    {
+      "file": "dish12.jpg"
+    },
+    {
+      "file": "promo.mp4"
+    },
+    {
+      "file": "dish13.jpg"
+    },
+    {
+      "file": "dish14.jpg"
+    },
+    {
+      "file": "dish15.jpg"
+    },
+    {
+      "file": "dish16.jpg"
+    },
+    {
+      "file": "dish17.jpg"
+    },
+    {
+      "file": "promo.mp4"
+    }
   ]
 }
